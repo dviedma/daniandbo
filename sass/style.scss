@@ -1,5 +1,63 @@
 @import "normalize";
+@import "reset";
 
-body {
-	background: pink;
+@import "variables";
+@import "fonts";
+
+
+
+
+
+
+// Common
+.box {
+  background: lightgreen;
+  padding: 2%;
+  width: 30%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 5% 0;
+}
+
+// Header
+header {
+  nav {
+    transform: translate(40px);
+    ul {
+      list-style: none;
+      text-align: center;
+      li {
+        display: inline-block;
+        margin: 0 2%;
+
+        &.logo {
+          a {
+            font-size: 37px;
+            font-family: "BrownPro-Bold";
+          }
+        }
+
+        a {
+          font-size: 12px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// Intro
+#intro {
+  .box1 {
+    width: 320px;
+    text-align: center;
+  }
+  .box2 {
+    width: 320px;
+  }
+  .box3 {
+    width: 320px;
+  }
 }
