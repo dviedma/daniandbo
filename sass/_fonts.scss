@@ -12,6 +12,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'CaslonVSuperfine';
+    src: url('../fonts/CaslonVSuperfine');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body, p, a {
     font-family: 'BrownPro-Regular';
     font-size: 14px;
@@ -19,9 +26,28 @@ body, p, a {
     color: $color-green-text;
 }
 
-h1 {
-    font-family: 'ProximaNova-Light';
+h2 {
+    //font-family: 'CaslonVSuperfine';
+    font-family: "Times New Roman";
+    text-align: center;
+    font-weight: lighter;
     font-size: 48px;
-    line-height: 54px;
+    line-height: 42px;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $color-green-text;
 }
 
+strong {
+    font-family: 'BrownPro-Bold';
+    display: table;
+    border-bottom: 1px solid $color-green-text;
+    font-weight: normal;
+    line-height: 14px;
+    margin-bottom: 6px;
+}
+
+p {
+    margin: 2em 0;
+}

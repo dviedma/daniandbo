@@ -14,31 +14,35 @@
                 <li><a href="#when">When</a></li>
                 <li><a href="#where">Where</a></li>
                 <li><a href="#transportation">How to get there</a></li>
-                <li class="logo"><a href="intro">Dani & Bo</a></li>
+                <li class="logo"><a href="#intro">Dani & Bo</a></li>
                 <li><a href="#accommodations">Accommodations</a></li>
                 <li><a href="#explore">What to do in the area</a></li>
                 <li><a href="/linktogooglepoll">RSVP</a></li>
             </ul>
         </nav>
     </header>
-    <div class="main">
-        <section id="intro">
+    <div class="main" id="intro">
+        <section class="intro">
+            <div class="box box3"></div>
+            <div class="box box2"></div>
             <div class="box box1">
-                <h1>Join us for special moment of our wedding celebration</h1>
+                <h2>Join us for special moment of our wedding celebration</h2>
                 <a href="">RSVP</a>
             </div>
         </section>
-        <section id="when">
-            <div class="box box1">
-                <h1>When</h1>
+        <section class="when" id="when">
+            <div class="box box1" >
+                <h2>When</h2>
                 <p>The main event will be on Saturday, June 24th (Saint John Day!)
                     at 5pm at Can Mateu de la Creu.</p>
                 <p>The following day -Sunday, June 25th- there will be a vermut by the water on us at TBD, so we can all enjoy some beers and some sun and laugh about past night : )</p>
             </div>
         </section>
-        <section id="where">
+        <section class="where" id="where">
+            <div class="box box2"></div>
+            <div class="box box3"></div>
             <div class="box box1">
-                <h1>Where</h1>
+                <h2>Where</h2>
                 <p>The Wedding Celebration will be at the
                     beautiful masia of Can Mateu de la Creu.
                     Located nearby the beautiful town of
@@ -47,36 +51,43 @@
                     location TBD.</p>
             </div>
         </section>
-        <section id="transportation">
+        <section class="transportation" id="transportation">
+            <div class="box box2"></div>
             <div class="box box1">
-                <h1>How to get there</h1>
-                <p>Both the Wedding Celebration venue and the accommodation
+                <h2><span>How to</span><span>get there</span></h2>
+                <p>
+                    Both the Wedding Celebration venue and the accommodation
                     options take place nearby the town of La Bisbal de L’Emporda
                     (in the Girona region). This is located at 90 miles away from
                     Barcelona town (aprox.) and 16 miles away from Girona town.
-
-                    By plane
+                </p>
+                <p>
+                    <strong>By plane:</strong>
                     You have two options:
                     Barcelona Airport (BCN) - 90 miles away from the venue. Direct flight available from NY.
                     You can take a train (see below) to Girona town or rent a car to the wedding site.
-
+                </p>
+                <p>
                     Girona Airport (GRO) - 16 miles away from the venue. No direct flight.
                     You can take a taxi or bus to Girona town or rent a car to the wedding site.
-
-                    By train:
+                </p>
+                <p>
+                    <strong>By train:</strong>
                     You can get to the Wedding Celebration area from Barcelona to Girona town by train. The regular train takes about 1h and there is also a high speed option (AVE) that takes only 30min. From there you’ll need a car (16 miles away) to get to the wedding site.
-
-                    By car:
+                </p>
+                <p>
+                    <strong>By car:</strong>
                     Whether you decide to ride with friends or rent a car in Girona or Barcelona, just follow Google Maps directions to the Wedding Celebration venue and/or the different accommodations spots.
-
+                </p>
+                <p>
                     There will be a shuttle arranged to take you all from hotel accommodation to wedding venue.
                     Shuttle stops TBD.
                 </p>
             </div>
         </section>
-        <section id="accommodations">
+        <section class="accommodations" id="accommodations">
             <div class="box box1">
-                <h1>Accommodations</h1>
+                <h2>Accommodations</h2>
                 <p>
                     Lorem impsum accommodations
                 </p>
@@ -88,9 +99,9 @@
                 </ul>
             </div>
         </section>
-        <section id="explore">
+        <section class="explore" id="explore">
             <div class="box box1">
-                <h1>What to do in the area</h1>
+                <h2>What to do in the area</h2>
                 <p>
                     Lorem impsum explore
                 </p>
@@ -102,6 +113,23 @@
                 </ul>
             </div>
         </section>
+        <footer>
+            <small>Made with<span>❤️</span>for you</small>
+            <small>Dani & Bo 2017</small>
+        </footer>
     </div>
+
+    <script>
+        (function() {
+            document.addEventListener('scroll', function(e) {
+                if (document.body.scrollTop > 50) {
+                    document.body.className = "is-scrolled";
+                } else {
+                    document.body.className = "";
+                }
+            })
+
+        })();
+    </script>
 </body>
 </html>
