@@ -20,7 +20,7 @@
 }
 
 body, p, a {
-    font-family: 'BrownPro-Regular';
+    font-family: 'BrownPro-Regular', Arial, sans-serif;
     font-size: 14px;
     line-height: 24px;
     color: $color-green-text;
@@ -28,7 +28,7 @@ body, p, a {
 
 h2 {
     //font-family: 'CaslonVSuperfine';
-    font-family: "Times New Roman";
+    font-family: "Times New Roman", Serif;
     text-align: center;
     font-weight: lighter;
     font-size: 48px;
@@ -40,13 +40,19 @@ h2 {
 }
 
 strong {
-    font-family: 'BrownPro-Bold';
-    display: table;
-    border-bottom: 1px solid $color-green-text;
-    font-weight: normal;
-    line-height: 14px;
-    margin-bottom: 6px;
+    font-family: 'BrownPro-Bold', Arial, sans-serif;
 }
+.transportation {
+    strong {
+        font-family: 'BrownPro-Bold', Arial, sans-serif;
+        display: table;
+        border-bottom: 1px solid $color-green-text;
+        font-weight: normal;
+        line-height: 14px;
+        margin-bottom: 6px;
+    }
+}
+
 
 p {
     margin: 2em 0;
