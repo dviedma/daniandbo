@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+        <div class="hamburguer" id="hamburguer"></div>
         <nav>
             <ul>
                 <li><a href="#when">When</a></li>
@@ -17,7 +18,7 @@
                 <li class="logo"><a href="#intro">Dani & Bo</a></li>
                 <li><a href="#accommodations">Accommodations</a></li>
                 <li><a href="#explore">What to do in the area</a></li>
-                <li><a href="/linktogooglepoll">RSVP</a></li>
+                <li class="rsvp"><a href="/linktogooglepoll">RSVP</a></li>
             </ul>
         </nav>
     </header>
@@ -26,7 +27,7 @@
             <div class="box box3"></div>
             <div class="box box2"></div>
             <div class="box box1">
-                <h2>Join us for special moment of our wedding celebration</h2>
+                <h2>Join us for the special moment of our wedding celebration</h2>
                 <a href="">RSVP</a>
             </div>
         </section>
@@ -101,7 +102,7 @@
         </section>
         <section class="explore" id="explore">
             <div class="box box1">
-                <h2>What to do in the area</h2>
+                <h2><span>What to do</span><span>in the area</span></h2>
                 <p>
                     Lorem impsum explore
                 </p>
@@ -119,6 +120,20 @@
         </footer>
     </div>
 
+    <div class="mobile-nav" id="mobile-nav">
+        <nav>
+            <ul>
+                <li class="logo"><a href="#intro">Dani & Bo</a></li>
+                <li><a href="#when">When</a></li>
+                <li><a href="#where">Where</a></li>
+                <li><a href="#transportation">How to get there</a></li>
+                <li><a href="#accommodations">Accommodations</a></li>
+                <li><a href="#explore">What to do in the area</a></li>
+                <li class="rsvp"><a href="/linktogooglepoll">RSVP</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <script>
         (function() {
             document.addEventListener('scroll', function(e) {
@@ -127,7 +142,21 @@
                 } else {
                     document.body.className = "";
                 }
-            })
+            });
+
+            document.getElementById('hamburguer').addEventListener('click', function(e) {
+
+                if(document.body.dataset['ismobilenavopen'] == 'true') {
+                    document.body.dataset['ismobilenavopen'] = false;
+                }else {
+                    document.body.dataset['ismobilenavopen'] = true;
+                }
+
+            });
+
+            document.getElementById('mobile-nav').addEventListener('click', function(e) {
+                document.body.dataset['ismobilenavopen'] = false;
+            });
 
         })();
     </script>

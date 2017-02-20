@@ -20,17 +20,31 @@
   right: 0;
   top: 0;
   bottom: 0;
-}
 
-body.is-scrolled {
-  header {
-    position: fixed;
-    transform: translateY(0);
+  @media screen and (max-width: 650px) {
+    width: 100%!important;
+    box-sizing: border-box;
   }
 }
 
+body {
+  overflow-x: hidden;
+
+  &.is-scrolled {
+    header {
+      position: fixed;
+      transform: translateY(0);
+    }
+  }
+}
+
+
 .main {
   padding-top: 40px;
+
+  @media screen and (max-width: 650px) {
+    padding-top: 0;
+  }
 }
 
 section {
@@ -39,6 +53,17 @@ section {
   padding: 100px 20%;
   min-height: 700px;
   margin-bottom: 150px;
+
+  @media screen and (max-width: 950px) {
+    margin-bottom: 0px;
+    padding: 70px 20%;
+  }
+
+  @media screen and (max-width: 650px) {
+    min-height: auto;
+    padding: 100px 20%;
+    margin-bottom: 150px;
+  }
 }
 
 // Header
@@ -50,21 +75,71 @@ header {
   background: white;
   transform: translateY(50px);
   position: absolute;
+
+  @media screen and (max-width: 650px) {
+    position: fixed;
+  }
+
+  @media screen and (max-width: 650px) {
+    transform: translateY(0);
+  }
+
+  .hamburguer {
+    width: 30px;
+    height: 30px;
+    background: url(../img/hamburguer.svg) no-repeat;
+    position: absolute;
+    top: 17px;
+    left: 19px;
+    display: none;
+    z-index: 600;
+
+    @media screen and (max-width: 950px) {
+      display: block;
+    }
+  }
   nav {
     transform: translate(40px);
+
+    @media screen and (max-width: 950px) {
+      transform: translate(0);
+    }
+
     ul {
       list-style: none;
       text-align: center;
-      margin-top: 3px;
+      margin-top: 6px;
       li {
         display: inline-block;
         margin: 0 2%;
 
+        @media screen and (max-width: 950px) {
+          display: none;
+        }
+
         &.logo {
           transform: translateY(8px);
+
+          @media screen and (max-width: 950px) {
+            display: inline-block;
+          }
+
           a {
             font-size: 37px;
             font-family: "BrownPro-Bold";
+          }
+        }
+
+        &.rsvp {
+
+          background: $color-light-pink-2-background;
+          padding: 2px 14px;
+
+          @media screen and (max-width: 950px) {
+            display: inline-block;
+            right: 10px;
+            position: absolute;
+            top: 5px;
           }
         }
 
@@ -90,20 +165,75 @@ footer {
   }
 }
 
+// Mobile Nav {
+.mobile-nav {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 500;
+  padding: 5%;
+
+  ul {
+    list-style: none;
+
+    li {
+
+      &.logo a {
+        font-size: 24px;
+        line-height: 50px;
+      }
+
+      a {
+        font-size: 18px;
+        line-height: 37px;
+        color: #213d33;
+      }
+    }
+  }
+}
+
+body[data-ismobilenavopen = 'true'] {
+  overflow: hidden;
+
+  .mobile-nav {
+    display: block;
+  }
+}
+
+
 // Intro
 .intro {
+  @media screen and (max-width: 650px) {
+    min-height: 600px;
+  }
   h2 {
     line-height: 54px;
     border: none;
     margin: 0;
+    margin-bottom: 15px;
   }
   .box1 {
     width: 250px;
-    height: 290px;
+    height: 310px;
     text-align: center;
     left: -290px;
     top: -250px;
     padding: 3% 2%;
+
+    @media screen and (max-width: 650px) {
+      height: 400px;
+      text-align: center;
+      left: auto;
+      right: 0;
+      top: 180px;
+      padding: 30px;
+      width: 80%!important;
+      margin: 0;
+    }
   }
   .box2 {
     width: 424px;
@@ -112,13 +242,22 @@ footer {
     background-size: cover;
     top: 40px;
     left: 150px;
+
+    @media screen and (max-width: 650px) {
+      top: -200px;
+      left: 0;
+    }
   }
   .box3 {
     width: 328px;
     height: 320px;
-    background: #175032;
+    background: $color-green-text;
     top: 350px;
     left: -170px;
+
+    @media screen and (max-width: 650px) {
+      top: 160px;
+    }
   }
 }
 
@@ -129,6 +268,10 @@ footer {
     padding: 40px 60px;
     height: 630px;
     background: linear-gradient(to right, $color-green-background 0%, white 100%);
+
+    @media screen and (max-width: 650px) {
+      padding: 40px;
+    }
   }
 }
 
@@ -141,6 +284,14 @@ footer {
     left: -290px;
     top: -250px;
     background: $color-light-pink-background;
+
+    @media screen and (max-width: 650px) {
+      width: 70%!important;
+      bottom: auto;
+      left: -80px;
+      top: -90px;
+      height: auto;
+    }
   }
   .box2 {
     width: 300px;
@@ -149,6 +300,10 @@ footer {
     background-size: cover;
     top: -150px;
     left: 270px;
+
+    @media screen and (max-width: 650px) {
+      left: 0;
+    }
   }
   .box3 {
     width: 388px;
@@ -163,7 +318,12 @@ footer {
 
 // Transportation
 .transportation {
-  min-height: 1000px;
+
+  @media screen and (max-width: 650px) {
+    margin-bottom: 0;
+    min-height: auto;
+    padding: 0;
+  }
   h2 {
     border: none;
     span {
@@ -178,6 +338,15 @@ footer {
     background: $color-light-pink-2-background;
     top: 0px;
     left: 50px;
+
+    @media screen and (max-width: 650px) {
+      position: relative;
+      padding: 40px;
+      left: 0;
+      height: auto;
+      top: 130px;
+      bottom: auto;
+    }
   }
   .box2 {
     width: 455px;
@@ -186,12 +355,22 @@ footer {
     background: #fbf2ee;
     top: -27px;
     left: 24px;
+
+    @media screen and (max-width: 650px) {
+      top: 200px;
+    }
   }
 }
 
 // Accommodation
-.accommodations {
-  min-height: 1000px;
+.accommodations {  min-height: 1000px;
+
+  @media screen and (max-width: 650px) {
+    min-height: auto;
+    padding: 0;
+    margin-top: 190px;
+    margin-bottom: 0;
+  }
   .box1 {
     width: 430px;
     padding: 40px 60px;
@@ -199,6 +378,18 @@ footer {
     background: linear-gradient(to left, $color-green-background 0%, white 100%);
     top: 0px;
     left: 50px;
+
+    @media screen and (max-width: 650px) {
+      padding: 40px;
+      left: 0;
+      position: relative;
+      height: auto;
+
+      h2 {
+        text-align: left;
+        margin-left: -20px;
+      }
+    }
   }
 }
 
@@ -206,6 +397,12 @@ footer {
 // What to do in the area
 .explore {
   min-height: 1000px;
+
+  @media screen and (max-width: 650px) {
+    padding: 0;
+    min-height: auto;
+  }
+
   .box1 {
     width: 430px;
     padding: 40px 60px;
@@ -213,5 +410,18 @@ footer {
     background: $color-light-pink-2-background;
     top: 0px;
     left: 50px;
+
+    h2 {
+      border: none;
+      span {
+        border-bottom: 1px solid $color-green-text;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      position: relative;
+      height: auto;
+    }
   }
 }
