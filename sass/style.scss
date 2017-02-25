@@ -399,6 +399,7 @@ body[data-ismobilenavopen = 'true'] {
 
   .box1 {
     width: 75%;
+    max-width: 530px;
     padding: 50px 70px;
     height: auto;
     background: $color-light-pink-2-background;
@@ -440,6 +441,7 @@ body[data-ismobilenavopen = 'true'] {
   }
   .box1 {
     width: 75%;
+    max-width: 530px;
     padding: 40px 60px;
     position: relative;
     background: $color-green-background;
