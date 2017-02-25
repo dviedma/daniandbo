@@ -227,6 +227,7 @@ body[data-ismobilenavopen = 'true'] {
     left: -290px;
     top: -250px;
     padding: 3% 2%;
+    background: #fef9f0;
 
     @media screen and (max-width: 650px) {
       height: 400px;
@@ -255,7 +256,7 @@ body[data-ismobilenavopen = 'true'] {
   .box3 {
     width: 328px;
     height: 320px;
-    background: $color-green-text;
+    background: #213d33;
     top: 350px;
     left: -170px;
 
@@ -267,13 +268,16 @@ body[data-ismobilenavopen = 'true'] {
 
 // Whene
 .when {
+  min-height: 220px;
   .box1 {
     width: 430px;
     padding: 40px 60px;
     height: 630px;
-    background: linear-gradient(to right, $color-green-background 0%, white 100%);
+    //background: linear-gradient(to right, $color-green-background 0%, white 100%);
+    background: $color-green-background;
 
     @media screen and (max-width: 650px) {
+      height: 950px;
       padding: 40px;
     }
   }
@@ -281,6 +285,7 @@ body[data-ismobilenavopen = 'true'] {
 
 // Where
 .where {
+  margin-bottom: 0;
   .box1 {
     width: 260px;
     height: 340px;
@@ -292,7 +297,7 @@ body[data-ismobilenavopen = 'true'] {
     @media screen and (max-width: 650px) {
       width: 70%!important;
       bottom: auto;
-      left: -80px;
+      left: 0px;
       top: -90px;
       height: auto;
     }
@@ -322,6 +327,7 @@ body[data-ismobilenavopen = 'true'] {
 
 // Transportation
 .transportation {
+  min-height: 1000px;
   @media screen and (max-width: 950px) {
     margin-bottom: 150px;
   }
@@ -334,15 +340,16 @@ body[data-ismobilenavopen = 'true'] {
     span {
       border-bottom: 1px solid $color-green-text;
       display: block;
+      margin-bottom: 8px;
     }
   }
   .box1 {
-    width: 430px;
+    width: 450px;
     padding: 40px 60px;
-    height: 880px;
-    background: $color-light-pink-2-background;
-    top: 0px;
-    left: 50px;
+    height: 900px;
+    background: rgba(255, 242, 237, 0.7);
+    top: 30px;
+    left: 76px;
 
     @media screen and (max-width: 650px) {
       position: relative;
@@ -351,13 +358,14 @@ body[data-ismobilenavopen = 'true'] {
       height: auto;
       top: 130px;
       bottom: auto;
+      margin-top: 110px;
     }
   }
   .box2 {
     width: 455px;
     padding: 40px 60px;
     height: 900px;
-    background: #fbf2ee;
+    background: rgba(252, 245, 242, 0.7);
     top: -27px;
     left: 24px;
 
@@ -373,10 +381,16 @@ body[data-ismobilenavopen = 'true'] {
 .explore {
   min-height: 1000px;
 
+  img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+
   @media screen and (max-width: 650px) {
     padding: 0;
     min-height: auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     img {
       width: 100%;
@@ -384,23 +398,26 @@ body[data-ismobilenavopen = 'true'] {
   }
 
   .box1 {
-    width: 650px;
-    padding: 30px;
+    width: 75%;
+    padding: 50px 70px;
     height: auto;
     background: $color-light-pink-2-background;
     top: 0px;
-    left: 50px;
+    position: relative;
+
 
     h2 {
       border: none;
       span {
         border-bottom: 1px solid $color-green-text;
         display: block;
+        margin-bottom: 8px;
       }
     }
 
     @media screen and (max-width: 650px) {
       position: relative;
+      padding: 40px;
       height: auto;
       left: 0;
     }
@@ -409,7 +426,7 @@ body[data-ismobilenavopen = 'true'] {
 
 // Accommodation
 .accommodations {
-  min-height: 1000px;
+
 
   img {
     width: 100%;
@@ -422,12 +439,11 @@ body[data-ismobilenavopen = 'true'] {
     margin-bottom: 0;
   }
   .box1 {
-    width: 430px;
+    width: 75%;
     padding: 40px 60px;
-    height: 880px;
-    background: linear-gradient(to left, $color-green-background 0%, white 100%);
+    position: relative;
+    background: $color-green-background;
     top: 0px;
-    left: 50px;
 
     @media screen and (max-width: 650px) {
       padding: 40px;

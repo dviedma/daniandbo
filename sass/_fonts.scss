@@ -15,8 +15,9 @@
 }
 
 @font-face {
-    font-family: 'CaslonVSuperfine';
-    src: url('../fonts/CaslonVSuperfine');
+    font-family: 'SabonNextLTPro-Display';
+    src: url("../fonts/SabonNextLTPro-Display.eot");
+    src: url("../fonts/SabonNextLTPro-Display.eot") format("embedded-opentype"), url("../fonts/SabonNextLTPro-Display.ttf") format("truetype"), url('../fonts/SabonNextLTPro-Display.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -29,11 +30,11 @@ body, p, a {
 }
 
 h2 {
-    //font-family: 'CaslonVSuperfine';
-    font-family: "Times New Roman", Serif;
+    font-family: "SabonNextLTPro-Display", Serif;
     text-align: center;
     font-weight: lighter;
-    font-size: 48px;
+    font-size: 45px;
+    letter-spacing: 1px;
     line-height: 42px;
     display: table;
     margin: 0 auto;
