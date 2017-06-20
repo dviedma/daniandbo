@@ -296,9 +296,14 @@ body[data-ismobilenavopen = 'true'] {
 // Where
 .where {
   margin-bottom: 0;
+
+  @media screen and (max-width: 650px) {
+    margin-bottom: 240px;
+  }
+
   .box1 {
     width: 260px;
-    height: 340px;
+    height: 430px;
     padding: 5%;
     left: -290px;
     top: -250px;
@@ -326,12 +331,15 @@ body[data-ismobilenavopen = 'true'] {
     }
   }
   .box3 {
-    width: 388px;
+    //width: 388px;
+    width: 548px;
     height: 282px;
     background: #175032;
-    background: url(../img/canmateu-green.jpg) no-repeat;
+    //background: url(../img/canmateu-green.jpg) no-repeat;
+    background: url(../img/chiringuito.jpg) no-repeat;
     background-size: cover;
-    top: 350px;
+    //top: 350px;
+    top: 390px;
     left: 0px;
   }
 }
@@ -357,7 +365,7 @@ body[data-ismobilenavopen = 'true'] {
   .box1 {
     width: 450px;
     padding: 40px 60px;
-    height: 900px;
+    height: 990px;
     background: rgba(255, 242, 237, 0.7);
     top: 30px;
     left: 76px;
